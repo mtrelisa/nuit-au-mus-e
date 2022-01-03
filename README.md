@@ -1,4 +1,4 @@
-# nuit-au-mus-e
+# visite-au-mus-e
 Un jeu où l'on visite un musée, allant d'endroit en endroit, selon nos choix.Il y a des changements "d'espaces". (Jeu sur pygame):
 
 On choisit entre deux réponses à chaque fois. (clic droit):
