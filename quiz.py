@@ -24,7 +24,7 @@ class Question:
         Button(fenetre, text=self.reponses[1], command=lambda *args: self.verification("B", fenetre)).pack()
         return fenetre
 
-    def question_suivante(self,fenetre, question):
+    def question_suivante(self,question,fenetre):
         fenetre.pack_forget()
         demande_question(question)
 
@@ -68,15 +68,18 @@ class Musee:
 def parcours_musee():
     global questions1,questions2,questions3,questions4, fenetre_principale, parcours, button
     if(len(parcours) == 2 ):
-        Label(fenetre_principale, text="Vous avez Serez rediriger vers le quizz de votre section").pack()
+        Label(fenetre_principale, text="Vous serez redirige vers le quizz de l'oeuvre choisie").pack()
         if parcours=='00': 
-            Label(fenetre_principale, text="blablabla").pack()
+            Label(fenetre_principale, text="La grotte d'El Castillo comprend un gisement archéologique et une grotte ornée situés sur le monte Castillo à Puente Viesgo (Cantabrie, Espagne).On recense plus de 80 empreintes de mains et des figures circulaires réalisés avec des pigments rouges. Un de ces disques vient d’être daté d’au moins 40 800 ans et devient le plus ancien art pariétal au monde").pack()
             Button(fenetre_principale, text='aller au quizz' , command=lambda *args:demande_question(questions1)).pack()
         elif parcours =='01':
+            Label(fenetre_principale, text="La grotte de Lascaux, située sur la commune de Montignac-Lascaux, dans le département français de la Dordogne en région Nouvelle-Aquitaine. Leur âge est estimé entre environ 19 000 et 17 000 ans.  Elle est parfois surnommée « la chapelle Sixtine de l'art pariétal » du à la qualité esthétique de ses œuvres. ").pack()
             Button(fenetre_principale, text='aller au quizz' , command=lambda *args:demande_question(questions2)).pack()
         elif parcours =='10':
+            Label(fenetre_principale, text="La civilisation minoenne a révélé de nombreuses fresques, réalisées par des peintres expérimentés, qui se trouvaient dans les pièces d'apparat et aux entrées du palais. L’une des plus célèbres se trouvait au palais de Cnossos en Crète. Elle représente, sur un fond bleu, un taureau qui est en train de charger vers la gauche. Trois “acrobates” l’entourent, qui exécutent toutes les phases d’un saut périlleux").pack()
             Button(fenetre_principale, text='aller au quizz' , command=lambda *args:demande_question(questions3)).pack()
         elif parcours =='11':
+            Label(fenetre_principale, text="La scène peinte sur cette amphore grecque d'Athènes, datant des années 540-520 avant notre ère, présente le moment du combat entre le lion et Héraklès.").pack()
             Button(fenetre_principale, text='aller au quizz' , command=lambda *args:demande_question(questions4)).pack()
         else:
             return
@@ -179,7 +182,7 @@ parcours=""
 
 
 fenetre_principale = Tk()
-Label(fenetre_principale, text="Tu es nul. Mais continues à visiter c'est bon pour ta culture G !").pack()
-button = Button(fenetre_principale, text="Bienvenue au musee ", command=parcours_musee())
+Label(fenetre_principale, text="Bienvenue au musée !").pack()
+button = Button(fenetre_principale, text="Tu es nul. Mais continues à visiter c'est bon pour ta culture G !", command=parcours_musee())
 button.pack()
 fenetre_principale.mainloop()
