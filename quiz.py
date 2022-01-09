@@ -26,7 +26,7 @@ class Question:
 
     def question_suivante(self,fenetre):
         fenetre.pack_forget()
-        demande_question(question)
+        demande_question(self.question)
 
 
 def demande_question(questions):
