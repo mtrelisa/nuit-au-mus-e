@@ -24,7 +24,7 @@ class Question:
         Button(fenetre, text=self.reponses[1], command=lambda *args: self.verification("B", fenetre)).pack()
         return fenetre
 
-    def question_suivante(self,fenetre):
+    def question_suivante(self,fenetre, question):
         fenetre.pack_forget()
         demande_question(question)
 
