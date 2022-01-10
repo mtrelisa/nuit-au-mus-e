@@ -160,7 +160,7 @@ fichier.close()
 
 index = -1
 nb_bonnes_rep = 0
-nombre_de_questions = 3
+nombre_de_questions = 2
 index2= -1
 
 
@@ -183,6 +183,6 @@ parcours=""
 
 fenetre_principale = Tk()
 Label(fenetre_principale, text="Bienvenue au musée !").pack()
-button = Button(fenetre_principale, text="Tu es nul. Mais continues à visiter c'est bon pour ta culture G !", command=parcours_musee())
+button = Button(fenetre_principale, text="J'espère que ce quizz te plaira !", command=parcours_musee())
 button.pack()
 fenetre_principale.mainloop()
